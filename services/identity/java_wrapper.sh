@@ -14,9 +14,7 @@
 # limitations under the License.
 
 if [ "$INSTALL_TRACEABLE" = true ]; then
-    cp /etc/nginx/nginx.conf.template /usr/local/openresty/nginx/conf/nginx.conf
+    java -javaagent:./javaagent.jar -jar /app/user-microservices-1.0-SNAPSHOT.jar
+else
+    java -jar /app/user-microservices-1.0-SNAPSHOT.jar
 fi
-
-envsubst '${GO_SERVICE} ${JAVA_SERVICE} ${PYTHON_SERVICE}' < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf
-openresty
-exec "$@"

@@ -30,4 +30,8 @@ EXPOSE 8080
 
 ENV JAVA_TOOL_OPTIONS "-Xmx128m"
 
-CMD java -jar /app/user-microservices-1.0-SNAPSHOT.jar
+
+RUN curl -OL https://downloads.traceable.ai/agent/java/latest/javaagent-latest.tgz
+RUN tar -xzf javaagent-latest.tgz
+COPY ./java_wrapper.sh /app/java_wrapper.sh
+CMD /app/java_wrapper.sh
