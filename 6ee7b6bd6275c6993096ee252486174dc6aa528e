@@ -1,0 +1,13 @@
+---
+{
+  "attestations": [],
+  "base_commit_sha": "96ad84d4998522eadac9e3500f01bf06a06b8eb0",
+  "branch": "update-llm-sys-prompt",
+  "commit_sha": "6ee7b6bd6275c6993096ee252486174dc6aa528e",
+  "commit_time": "2026-05-07T13:00:38+05:30",
+  "commit_type": "direct_commit",
+  "git_ai_version": "1.4.2",
+  "prompts": {},
+  "repo": "https://github.com/mathew-jose/crAPI.git",
+  "schema_version": "authorship/3.0.0"
+}
